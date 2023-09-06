@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function(){
     function displayItem(item) {
         const itemElement = document.createElement("div");
         itemElement.className = "item";
-    
+        
         const contentList = [
         createImage({ class: 'imageElement', image: item.links[0].href }),
         createText({ element: 'h2', class: 'nameElement', text: item.data[0].title }),
@@ -50,11 +50,15 @@ document.addEventListener("DOMContentLoaded", function(){
         let nombre = inputBuscar.value;
         fetch(URL_NASA + nombre)
         .then((response) => {
-            return response.json()
+            if(response.ok){
+                return response.json()
+            }
         })
         .then((data) => {
             item = data.collection.items;
-            item.forEach(objeto => displayItem(objeto));
+            if(item){
+                item.forEach(objeto => displayItem(objeto));
+            }
         })
         .catch((error) => {
             console.log(error)
