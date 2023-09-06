@@ -47,7 +47,6 @@ document.addEventListener("DOMContentLoaded", function(){
 
     btnBuscar.addEventListener("click", function(){
         let nombre = inputBuscar.value;
-        console.log(URL_NASA + nombre);
         fetch(URL_NASA + nombre)
         .then((response) => {
             return response.json()
