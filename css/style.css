@@ -1,3 +1,46 @@
+body{
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+}
+
 main {
-    min-height: calc(100vh - 160px);
-  }
+  min-height: calc(100vh - 160px);
+}
+
+.imageElement {
+  width: 300px;
+  margin: 10px;
+  border: 3px blue solid;
+  border-radius: 20px;
+}
+
+.nameElement {
+  text-decoration: underline 3px blue;
+  color: black;
+}
+
+.descriptionElement{
+  max-width: 500px;
+  padding: 10px;
+}
+
+.dateElement{
+  border: 2px solid black;
+  border-radius: 4px;
+  margin: 20px;
+}
+
+.item{
+  border: 4px solid black;
+  border-radius: 20px;
+  max-width: 500px;
+  background-color:antiquewhite;
+  margin: 10px;
+  transition: transform 0.2s ease;
+}
+
+.item:hover{
+  transform: scale(115%);
+}
