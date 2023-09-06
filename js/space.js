@@ -43,6 +43,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
     function borrarLista(){
         contenedor.innerHTML = "";
+        inputBuscar.value = "";
     }
 
     btnBuscar.addEventListener("click", function(){
